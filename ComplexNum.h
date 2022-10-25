@@ -23,7 +23,9 @@ public:
 	// ComplexNum * k, where k is a constant
 	// and operator<<
 	// 
-	
+	ComplexNum operator+(ComplexNum other);
+	ComplexNum operator-(ComplexNum other);
+	ComplexNum operator*(double a);
 };
 
 #endif // COMPLEX_NUM_H

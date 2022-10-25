@@ -1,5 +1,6 @@
 #include "ComplexNum.h"
 #include <cmath>
+#include <iostream>
 
 ComplexNum::ComplexNum() {};
 
@@ -22,4 +23,19 @@ double ComplexNum::getRe() {
 
 double ComplexNum::getIm() {
 	return mIm;
+}
+ComplexNum ComplexNum::operator+(ComplexNum other)
+{
+return ComplexNum (mRe + other.mRe, mIm + other.mIm ); 
+}
+ComplexNum ComplexNum::operator-(ComplexNum other)
+{
+return ComplexNum (mRe - other.mRe, mIm - other.mIm );
+}
+ComplexNum ComplexNum::operator*(double a)
+{
+return ComplexNum (mRe * a, mIm * a );
+}
+std::ostream& operator<<(std::ostream& ostream, ComplexNum complex) {
+  std::cout << complex.getRe() << " " << complex.getIm() << "i";
 }
