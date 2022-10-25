@@ -1,6 +1,6 @@
 #ifndef COMPLEX_NUM_H
 #define COMPLEX_NUM_H
-
+#include <iostream>
 class ComplexNum {
 private:
 	double mRe = 0; // real parth
@@ -27,5 +27,5 @@ public:
 	ComplexNum operator-(ComplexNum other);
 	ComplexNum operator*(double a);
 };
-
+std::ostream& operator<<(std::ostream& ostream, ComplexNum complex);
 #endif // COMPLEX_NUM_H

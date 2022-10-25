@@ -37,5 +37,5 @@ ComplexNum ComplexNum::operator*(double a)
 return ComplexNum (mRe * a, mIm * a );
 }
 std::ostream& operator<<(std::ostream& ostream, ComplexNum complex) {
-  std::cout << complex.getRe() << " " << complex.getIm() << "i";
+ return  ostream << complex.getRe() << " " << complex.getIm() << "i";
 }
